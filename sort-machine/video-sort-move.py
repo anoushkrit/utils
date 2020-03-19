@@ -40,7 +40,8 @@ def image_date_sort(source_path, dest_path):
 
     for folderName, subFolders, fnames in os.walk(source_path):
         for fname in fnames:
-            if fname.endswith('.png') | fname.endswith('.jpg') | fname.endswith('.jpeg') | fname.endswith('.bmp') | fname.endswith('.PNG'):  # | fname.endswith('.mp4'):
+            if fname.endswith('.mp4') | fname.endswith('.MP4') | fname.endswith('.mkv') | fname.endswith('.MKV'):
+                # | fname.endswith('.mp4'):
 
                 fpath = os.path.join(folderName, fname)
                 print(fpath)
@@ -77,8 +78,8 @@ def image_date_sort(source_path, dest_path):
     return list_values
 
 
-SOURCE_PATH = "/mnt/d/Media/WhatsApp Images"
-DEST_PATH = "/mnt/d/Pictures/WhatsApp-Images"
+SOURCE_PATH = "E:/Cluttered-Photos"
+DEST_PATH = "E:/Videos"
 
 
 def main():
@@ -86,6 +87,7 @@ def main():
     list_values = image_date_sort(source_path= SOURCE_PATH, dest_path= DEST_PATH)
     df2 = pd.DataFrame(list_values, columns=['Filename', 'Year', 'Month', 'Date', 'Size', 'Source', 'Current'])
     df2.to_csv(r'\images.csv', index=None, header=True)
+    df2.to_csv(r'\'' + SOURCE_PATH[-1] + '.csv',index=None, header=True)
     # move_file_type(source_path=SOURCE_PATH, dest_path=DEST_PATH)
 
 
