@@ -23,7 +23,7 @@ array = ["zict", "XlsxWriter", "wurlitzer", "wrapt", "pyzmq", "traitlets", "jupy
 
 for a in array:
     try:
-        print("pip install " + a + " --upgrade ")
-        call("pip install " + a + " --upgrade ", shell=True)
+        print("pip3 install " + a + " --upgrade ")
+        call("pip3 install " + a + " --upgrade ", shell=True)
     except:
-        call("pip install " + a, shell=True)
+        call("pip3 install " + a, shell=True)
