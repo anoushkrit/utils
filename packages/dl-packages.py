@@ -10,11 +10,14 @@ lib = ["numpy", "scipy", "pandas", "matplotlib", "seaborn", "bokeh", "plotly"
 
 for l in lib:
     try:
-        call("pip3 install " + l + " --upgrade --user", shell=True)
+        call("pip3 install " + l, shell=True)
     except:
-        call("pip3 install " + l + " --user", shell=True)
+        try:
+            call("pip3 install " + l + " --upgrade --user", shell=True)
+        except:
+            call("pip3 install " + l + " --user", shell=True)
 
-call("sudo apt-get purge nvidia*", shell=True)
-call("sudo apt install ubuntu-drivers-common", shell=True)
+# call("sudo apt-get purge nvidia*", shell=True)
+# call("sudo apt install ubuntu-drivers-common", shell=True)
 call("sudo apt install jupyter", shell=True)
-call("sudo apt-get install nvidia-375", shell=True)
+# call("sudo apt-get install nvidia-375", shell=True)
