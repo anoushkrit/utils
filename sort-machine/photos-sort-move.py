@@ -77,8 +77,11 @@ def image_date_sort(source_path, dest_path):
     return list_values
 
 
-SOURCE_PATH = "E:/Cluttered-Photos"
-DEST_PATH = "E:/Photos"
+# SOURCE_PATH = "E:/Cluttered-Photos"
+# DEST_PATH = "E:/Photos"
+
+SOURCE_PATH = "G:/Archives/GDrive_GPhotos/takeout"
+DEST_PATH = "G:/Archives/GDrive_GPhotos/GPhotos"
 
 
 def main():
